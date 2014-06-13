@@ -35,7 +35,7 @@ class Ember::Appkit::Rails::Template < Tilt::Template
     if configuration.output_type == :amd
       target = amd_template_target(scope)
 
-      "define('#{target}', ['exports'], function(__exports__){ __exports__.['default'] = #{template} });"
+      "define('#{target}', ['exports'], function(__exports__){ __exports__['default'] = #{template} });"
     else
       target = global_template_target(scope)
 
